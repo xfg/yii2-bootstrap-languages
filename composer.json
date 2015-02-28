@@ -1,0 +1,22 @@
+{
+    "name": "xfg/yii2-bootstrap-languages",
+    "description": "Yii2 bootstrap-languages",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","bootstrap-languages"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "xfg",
+            "email": "timofey.web@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/bootstrap-languages": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "xfg\\bootstrapLanguages\\": ""
+        }
+    }
+}
