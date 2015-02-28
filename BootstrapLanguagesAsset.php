@@ -15,7 +15,7 @@ use yii\web\AssetBundle;
  */
 class BootstrapLanguagesAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/bootstrap-languages';
+    public $sourcePath = '@bower/bootstrap-lang';
     public $css = [
         'languages.css',
     ];
