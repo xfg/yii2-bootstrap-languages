@@ -1,10 +1,6 @@
-Yii2 bootstrap-language
+Yii2 bootstrap-languages
 =======================
-The _Languages for Bootstrap 3_ project provides a simple way to present
-language labels and names in a _Bootstrap 3_ project.
-
-Head over to the [documentation](http://usrz.github.io/bootstrap-languages)
-pages for some hint on how languages are presented, and how to use this library.
+Yii2-extension for [bootstrap-languages](https://github.com/xfg/bootstrap-languages)
 
 This project is distributed under the terms of the
 [Apache Software License, Version 2](LICENSE.md).
@@ -17,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist xfg/yii2-bootstrap-language "*"
+php composer.phar require --prefer-dist xfg/yii2-bootstrap-languages "*"
 ```
 
 or add
 
 ```
-"xfg/yii2-bootstrap-language": "*"
+"xfg/yii2-bootstrap-languages": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -34,5 +30,32 @@ Usage
 
 Once the extension is installed, simply use it in your code by  :
 
-```php
-<?= \xfg\bootstrapLanguage\AutoloadExample::widget(); ?>```
+```
+<?php
+/**
+ * @link http://www.yiiframework.com/
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ */
+namespace app\assets;
+use yii\web\AssetBundle;
+/**
+ * @author Qiang Xue <qiang.xue@gmail.com>
+ * @since 2.0
+ */
+class AppAsset extends AssetBundle
+{
+    public $basePath = '@webroot';
+    public $baseUrl = '@web';
+    public $css = [
+        'css/site.css',
+    ];
+    public $js = [
+    ];
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+        __'xfg\bootstrapLanguages\BootstrapLanguagesAsset'__,
+    ];
+}
+```
